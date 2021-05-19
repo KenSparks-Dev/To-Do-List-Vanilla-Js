@@ -62,5 +62,4 @@ function printTodos(todo) {
 	//Select form from html and append formItem to it.
 	let form = document.querySelector('.form');
 	form.append(formItem);
-	console.log(label);
 }
