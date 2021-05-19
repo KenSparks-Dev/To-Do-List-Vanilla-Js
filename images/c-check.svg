@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>c-check</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="add-task" transform="translate(-1000.000000, -497.000000)" fill-rule="nonzero">
+            <g id="c-check" transform="translate(1000.000000, 497.000000)">
+                <path d="M12,24 C5.38298087,24 0,18.6167635 0,12 C0,5.38323652 5.38298087,0 12,0 C18.6170191,0 24,5.38323652 24,12 C24,18.6167635 18.6170191,24 12,24 Z" id="Path" fill="#72C472"></path>
+                <polygon id="Path" fill="#FFFFFF" points="9.91304348 17.6497096 4.26358957 12 5.73913043 10.5242035 9.91304348 14.6981165 18.2608696 6.35029043 19.7364104 7.82608696"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

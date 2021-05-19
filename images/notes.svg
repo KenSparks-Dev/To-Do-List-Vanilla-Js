@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="17px" viewBox="0 0 14 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>notes</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="edit-todo" transform="translate(-1010.000000, -592.000000)" stroke="#475569">
+            <g id="notes" transform="translate(1010.000000, 592.500000)">
+                <path d="M11.5,1.5 L12.5,1.5 C13.0522847,1.5 13.5,1.94771525 13.5,2.5 L13.5,14.5 C13.5,15.0522847 13.0522847,15.5 12.5,15.5 L1.5,15.5 C0.94771525,15.5 0.5,15.0522847 0.5,14.5 L0.5,2.5 C0.5,1.94771525 0.94771525,1.5 1.5,1.5 L2.5,1.5" id="Path"></path>
+                <rect id="Rectangle" x="4.5" y="0.5" width="5" height="2"></rect>
+                <line x1="3.5" y1="6.5" x2="10.5" y2="6.5" id="Path"></line>
+                <line x1="3.5" y1="9.5" x2="10.5" y2="9.5" id="Path"></line>
+                <line x1="3.5" y1="12.5" x2="10.5" y2="12.5" id="Path"></line>
+            </g>
+        </g>
+    </g>
+</svg>
