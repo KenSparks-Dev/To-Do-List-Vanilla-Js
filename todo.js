@@ -50,6 +50,16 @@ function printTodos(todo) {
 	let icon = document.createElement('img');
 	icon.src = '/images/notes.svg';
 
+	//create delete task btn
+	let deleteTask = document.createElement('div');
+	let deleteTaskBtn = document.createElement('button');
+	let deleteIcon = document.createElement('img');
+	deleteIcon.src = '/images/c-remove.svg';
+	deleteTask.classList.add('delete-task');
+	deleteTaskBtn.classList.add('delete-btn');
+	deleteTask.append(deleteTaskBtn);
+	deleteTaskBtn.append(deleteIcon);
+
 	//append title from todos objects to the label
 	label.append(todo.title);
 
@@ -59,7 +69,42 @@ function printTodos(todo) {
 	//append formItemCheckbox to form item div
 	formItem.append(formItemCheckbox, icon);
 
+	//formItemGroup
+	var formItemGroup = document.createElement('div');
+	formItemGroup.classList.add('form-item-group');
+	formItemGroup.append(formItem, deleteTask);
+
 	//Select form from html and append formItem to it.
-	let form = document.querySelector('.form');
-	form.append(formItem);
+	var form = document.querySelector('.form');
+	form.append(formItemGroup);
 }
+
+//Animations
+
+//Add Task Btn animation
+let addTaskBtn = document.querySelector('.addTaskBtn');
+let addTaskBtnText = document.querySelector('.btn-text');
+
+addTaskBtn.onmouseover = function () {
+	addTaskBtnText.style.display = 'block';
+	addTaskBtn.style.width = '120px';
+	addTaskBtn.style.borderRadius = '5px';
+	addTaskBtn.style.display = 'flex';
+	addTaskBtn.style.justifyContent = 'space-between';
+};
+addTaskBtn.onmouseout = function () {
+	addTaskBtnText.style.display = 'none';
+	addTaskBtn.style.width = 'inherit';
+};
+
+//Delete Task Btn Animation
+let deleteTaskBtn = document.querySelector('.delete-task');
+let formItemHover = document.querySelector('.form-item');
+formItemHover.onmouseover = function () {
+	deleteTaskBtn.style.display = 'block';
+};
+formItemHover.onmouseout = function () {
+	setTimeout(() => {
+		deleteTaskBtn.style.display = 'none';
+	}, 3500);
+};
