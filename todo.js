@@ -13,8 +13,8 @@ let todos = [
 		title: 'Do Another Something',
 		description:
 			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sed, aliquid qui animi provident rerum dolores aliquam nostrum in ullam odio expedita aspernatur dicta labore eaque necessitatibus ratione soluta autem?',
-		createdOn: '',
-		updatedOn: '',
+		createdOn: new Date(),
+		updatedOn: new Date(),
 		isCompleted: false,
 	},
 	{
