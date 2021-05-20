@@ -13,8 +13,8 @@ let todos = [
 		title: 'Do Another Something',
 		description:
 			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sed, aliquid qui animi provident rerum dolores aliquam nostrum in ullam odio expedita aspernatur dicta labore eaque necessitatibus ratione soluta autem?',
-		createdOn: '',
-		updatedOn: '',
+		createdOn: new Date(),
+		updatedOn: new Date(),
 		isCompleted: false,
 	},
 	{
@@ -29,82 +29,23 @@ let todos = [
 ];
 
 todos.forEach(printTodos);
-
 function printTodos(todo) {
-	//create form-item-checkbox div and assign class
-	let formItemCheckbox = document.createElement('div');
-	formItemCheckbox.classList.add('form-item-checkbox');
+	const formItemInner = `
+	<div class="form-item">
+		<div class="form-item-checkbox">
+			<input type="checkbox" id="${todo.id}"><label for="${todo.id}">${todo.title}</label>
+		</div>
+		<img src="/images/notes.svg">
+		<div class="delete-task">
+			<button class="delete-btn"><span class="btn-text"></span></button>
+		</div>
+	</div>
+	`;
 
-	//create form item div and assign class
-	let formItem = document.createElement('div');
-	formItem.classList.add('form-item');
+	let container = document.createElement('div');
+	container.classList.add('form-item-group');
+	container.innerHTML = formItemInner;
 
-	//create input and label element. Give input checkbox type.
-	let label = document.createElement('label');
-	label.htmlFor = todo.id;
-	let input = document.createElement('input');
-	input.type = 'checkbox';
-	input.id = todo.id;
-
-	//create img element and assign the notes icon to it.
-	let icon = document.createElement('img');
-	icon.src = '/images/notes.svg';
-
-	//create delete task btn
-	let deleteTask = document.createElement('div');
-	let deleteTaskBtn = document.createElement('button');
-	let deleteIcon = document.createElement('img');
-	deleteIcon.src = '/images/c-remove.svg';
-	deleteTask.classList.add('delete-task');
-	deleteTaskBtn.classList.add('delete-btn');
-	deleteTask.append(deleteTaskBtn);
-	deleteTaskBtn.append(deleteIcon);
-
-	//append title from todos objects to the label
-	label.append(todo.title);
-
-	//append input and label to form-item-checkbox div
-	formItemCheckbox.append(input, label);
-
-	//append formItemCheckbox to form item div
-	formItem.append(formItemCheckbox, icon);
-
-	//formItemGroup
-	var formItemGroup = document.createElement('div');
-	formItemGroup.classList.add('form-item-group');
-	formItemGroup.append(formItem, deleteTask);
-
-	//Select form from html and append formItem to it.
-	var form = document.querySelector('.form');
-	form.append(formItemGroup);
+	let form = document.querySelector('.form');
+	form.append(container);
 }
-
-//Animations
-
-//Add Task Btn animation
-let addTaskBtn = document.querySelector('.add-task-btn');
-let addTaskBtnText = document.querySelector('.btn-text');
-
-addTaskBtn.onmouseover = function () {
-	// addTaskBtnText.style.display = 'block';
-	// addTaskBtn.style.width = '120px';
-	// addTaskBtn.style.borderRadius = '5px';
-	// addTaskBtn.style.display = 'flex';
-	// addTaskBtn.style.justifyContent = 'space-between';
-};
-// addTaskBtn.onmouseout = function () {
-// 	addTaskBtnText.style.display = 'none';
-// 	addTaskBtn.style.width = 'inherit';
-// };
-
-//Delete Task Btn Animation
-// let deleteTaskBtn = document.querySelector('.delete-btn');
-// let formItemHover = document.querySelector('.form-item-group');
-// formItemHover.onmouseover = function () {
-// 	deleteTaskBtn.style.display = 'block';
-// };
-// formItemHover.onmouseout = function () {
-// 	setTimeout(() => {
-// 		deleteTaskBtn.style.display = 'none';
-// 	}, 3500);
-// };
