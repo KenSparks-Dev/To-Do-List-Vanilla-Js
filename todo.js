@@ -82,29 +82,29 @@ function printTodos(todo) {
 //Animations
 
 //Add Task Btn animation
-let addTaskBtn = document.querySelector('.addTaskBtn');
+let addTaskBtn = document.querySelector('.add-task-btn');
 let addTaskBtnText = document.querySelector('.btn-text');
 
 addTaskBtn.onmouseover = function () {
-	addTaskBtnText.style.display = 'block';
-	addTaskBtn.style.width = '120px';
-	addTaskBtn.style.borderRadius = '5px';
-	addTaskBtn.style.display = 'flex';
-	addTaskBtn.style.justifyContent = 'space-between';
+	// addTaskBtnText.style.display = 'block';
+	// addTaskBtn.style.width = '120px';
+	// addTaskBtn.style.borderRadius = '5px';
+	// addTaskBtn.style.display = 'flex';
+	// addTaskBtn.style.justifyContent = 'space-between';
 };
-addTaskBtn.onmouseout = function () {
-	addTaskBtnText.style.display = 'none';
-	addTaskBtn.style.width = 'inherit';
-};
+// addTaskBtn.onmouseout = function () {
+// 	addTaskBtnText.style.display = 'none';
+// 	addTaskBtn.style.width = 'inherit';
+// };
 
 //Delete Task Btn Animation
-let deleteTaskBtn = document.querySelector('.delete-task');
-let formItemHover = document.querySelector('.form-item');
-formItemHover.onmouseover = function () {
-	deleteTaskBtn.style.display = 'block';
-};
-formItemHover.onmouseout = function () {
-	setTimeout(() => {
-		deleteTaskBtn.style.display = 'none';
-	}, 3500);
-};
+// let deleteTaskBtn = document.querySelector('.delete-btn');
+// let formItemHover = document.querySelector('.form-item-group');
+// formItemHover.onmouseover = function () {
+// 	deleteTaskBtn.style.display = 'block';
+// };
+// formItemHover.onmouseout = function () {
+// 	setTimeout(() => {
+// 		deleteTaskBtn.style.display = 'none';
+// 	}, 3500);
+// };
