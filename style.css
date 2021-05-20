@@ -84,7 +84,7 @@ main {
 
 /* Form button */
 
-.add-task-btn {
+.add-task button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,59 +96,10 @@ main {
   color: var(--add-task-bg-color);
 }
 
-.add-task-btn:hover {
-  display: flex;
-  width: 120px;
-  border-radius: 5px;
-  justify-content: space-between;
-}
-
-.btn-text {
-  color: var(--font-color);
-  display: none;
-}
-
-.add-task-btn:hover .btn-text {
-  display: block;
-}
-
-.delete-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--delete-task-bg-color);
-  border: transparent 0px solid;
-  border-radius: 20%;
-  height: var(--task-btn-size);
-  width: var(--task-btn-size);
-  color: var(--delete-task-bg-color);
-}
-
-.delete-task {
-  position: absolute;
-  left: 660px;
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  width: 1px;
-  word-wrap: normal !important;
-}
-
 /*Form and form items*/
 form {
   display: flex;
   flex-direction: column;
-  width: 100%;
-}
-
-.form-item-group {
-  display: flex;
-  width: 100%;
-  position: relative;
 }
 
 .form-item {
@@ -162,22 +113,8 @@ form {
   border-radius: 5px;
   box-shadow: 1px 2px 2px var(--box-shadow-color);
   font-size: 14px;
-  width: 100%;
-}
-
-.form-item-group:hover .delete-task {
-  position: absolute;
-  border: inherit;
-  clip: inherit;
-  clip-path: inherit;
-  height: var(--task-btn-size);
-  margin: 0;
-  overflow: visible;
-  padding: 0;
-  width: 1px;
-  word-wrap: inherit;
 }
 
 .form-item label {
-  padding-left: 4px;
+  padding-left: 5px;
 }
