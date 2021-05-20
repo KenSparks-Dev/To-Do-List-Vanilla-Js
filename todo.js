@@ -29,37 +29,23 @@ let todos = [
 ];
 
 todos.forEach(printTodos);
-
 function printTodos(todo) {
-	//create form-item-checkbox div and assign class
-	let formItemCheckbox = document.createElement('div');
-	formItemCheckbox.classList.add('form-item-checkbox');
+	const formItemInner = `
+	<div class="form-item">
+		<div class="form-item-checkbox">
+			<input type="checkbox" id="${todo.id}"><label for="${todo.id}">${todo.title}</label>
+		</div>
+		<img src="/images/notes.svg">
+		<div class="delete-task">
+			<button class="delete-btn"><span class="btn-text"></span></button>
+		</div>
+	</div>
+	`;
 
-	//create form item div and assign class
-	let formItem = document.createElement('div');
-	formItem.classList.add('form-item');
+	let container = document.createElement('div');
+	container.classList.add('form-item-group');
+	container.innerHTML = formItemInner;
 
-	//create input and label element. Give input checkbox type.
-	let label = document.createElement('label');
-	label.htmlFor = todo.id;
-	let input = document.createElement('input');
-	input.type = 'checkbox';
-	input.id = todo.id;
-
-	//create img element and assign the notes icon to it.
-	let icon = document.createElement('img');
-	icon.src = '/images/notes.svg';
-
-	//append title from todos objects to the label
-	label.append(todo.title);
-
-	//append input and label to form-item-checkbox div
-	formItemCheckbox.append(input, label);
-
-	//append formItemCheckbox to form item div
-	formItem.append(formItemCheckbox, icon);
-
-	//Select form from html and append formItem to it.
 	let form = document.querySelector('.form');
-	form.append(formItem);
+	form.append(container);
 }
