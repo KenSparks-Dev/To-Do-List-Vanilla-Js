@@ -37,7 +37,7 @@ function printTodos(todo) {
 		</div>
 		<img src="/images/notes.svg">
 		<div class="delete-task">
-			<button class="delete-btn"><span class="btn-text"></span></button>
+			<button class="delete-btn"><img src="/images/c-remove.svg" /></button>
 		</div>
 	</div>
 	`;
