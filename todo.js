@@ -28,6 +28,23 @@ let todos = [
 	},
 ];
 
+//AddTodo Function
+addTaskBtn = document.querySelector('.addTaskBtn');
+addTaskBtn.onclick = addTodo();
+
+function addTodo(id, title, description, createdOn, updatedOn, isComplete) {
+	let createdOnDate = new Date();
+	return todos.push({
+		id: 4,
+		title: 'Hello World',
+		description: 'Say hi to the neighbors!',
+		createdOn: createdOnDate,
+		updatedOn: updatedOn,
+		isComplete: false,
+	});
+};
+
+//printTodo function
 todos.forEach(printTodos);
 
 function printTodos(todo) {
@@ -82,7 +99,6 @@ function printTodos(todo) {
 //Animations
 
 //Add Task Btn animation
-let addTaskBtn = document.querySelector('.addTaskBtn');
 let addTaskBtnText = document.querySelector('.btn-text');
 
 addTaskBtn.onmouseover = function () {
