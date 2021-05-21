@@ -36,10 +36,10 @@ function printTodos(todo) {
 			<input type="checkbox" id="${todo.id}"><label for="${todo.id}">${todo.title}</label>
 		</div>
 		<img src="/images/notes.svg">
+	</div>
 		<div class="delete-task">
 			<button class="delete-btn"><img src="/images/c-remove.svg"/></button>
 		</div>
-	</div>
 	`;
 
 	let container = document.createElement('div');
