@@ -148,7 +148,6 @@ form {
   display: flex;
   width: 100%;
   position: relative;
-  justify-content: space-between;
 }
 
 .form-item {
